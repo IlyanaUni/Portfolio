@@ -232,7 +232,7 @@ header nav a:hover {
 
 /* La section pour afficher les compétences */
 .skills {
-    background: url('img/code.mp4') no-repeat center center/cover; /* Fond de la section avec vidéo */
+    background: url('code.mp4') no-repeat center center/cover; /* Fond de la section avec vidéo */
     background-size: cover; /* fond couvre toute la section */
     color: #fff; 
     padding: 30px 20px; /* Ajoute un espace interne : 30px en haut/bas, 20px à gauche/droite */
