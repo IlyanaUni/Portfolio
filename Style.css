@@ -1,0 +1,529 @@
+/* === GLOBAL STYLES === */
+/* Réinitialise les marges, les paddings, et configure le box-sizing pour tout élément */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* styles globaux corps de la page */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Police principale */
+    color: #fff; /* Texte blanc */
+    background-color: #000; /* Fond noir */
+    line-height: 1.6; /* Hauteur de ligne pour espacer le texte */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+/* === NAVIGATION === */
+/* Styles de l'en-tête principal */
+header {
+    background: linear-gradient(to bottom, #000 60%, #333); /* Dégradé du noir vers le gris */
+    color: #fff; /* Texte blanc */
+    padding: 1rem 0; /* Espacement vertical interne */
+    display: flex; /* mise en place de Flexbox */
+    justify-content: center; /* Centre horizontalement les éléments */
+    align-items: center; /* Centre verticalement les éléments */
+    z-index: 1000; /* Priorité d'affichage élevée */
+    position: relative; /* Position relative */
+}
+
+/* Styles de la navigation dans l'en-tête */
+header nav {
+    position: fixed; /* Fixe la navigation en haut de l'écran */
+    top: 0; /* Positionne la navigation en haut */
+    left: 0; /* Positionne la navigation à gauche */
+    width: 100%; /* Occupe toute la largeur */
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte blanc */
+    padding: 0.5rem 1rem; /* Espacement interne */
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Aligne verticalement les éléments */
+    z-index: 1000; /* Priorité d'affichage élevée */
+}
+
+/* Liste dans la navigation */
+header nav ul {
+    display: flex; /* Affiche les éléments en ligne */
+    list-style-type: none; /* Supprime les puces des listes */
+}
+
+/* Élément individuel de la liste */
+header nav li {
+    margin: 0 1rem; /* Espacement horizontal entre les liens */
+}
+
+/* Liens dans la navigation */
+header nav a {
+    color: #fff; /* Texte blanc */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-size: 1.1rem; /* Taille du texte */
+    transition: color 0.3s ease-in-out; /* Animation de couleur au survol */
+}
+
+/* Effet au survol des liens */
+header nav a:hover {
+    color: #003366; /* Change la couleur du lien en bleu foncé */
+}
+
+
+/* Styles de la section principale de la page */
+.hero {
+    padding-top: 75px; /* espace pour la barre de navigation fixe */
+    padding-bottom: 0; /* Pas d'espacement en bas */
+    text-align: center; /* Centre le texte */
+    background-color: #fff; /* Fond blanc */
+    color: #000; /* Texte noir */
+    background: linear-gradient(to bottom, #fff 60%, #333 100%); /* Dégradé blanc vers gris */
+    display: flex; /* Active Flexbox */
+    flex-direction: column; /* Organise verticalement */
+    justify-content: flex-end; /* Contenu vers le bas */
+}
+
+/* Présentation (texte + image) */
+.presentation-container {
+    display: flex; /* Active Flexbox */
+    flex-direction: row; /* Organise texte et image côte à côte */
+    align-items: center; /* Centre verticalement les éléments */
+    justify-content: space-between; /* espacement égal entre les éléments */
+    gap: 20px; /* Espacement entre texte et image */
+    width: 100%; /*conteneur sur toute la largeur */
+}
+
+/* Styles supplémentaires pour la section HERO */
+.hero {
+    padding-top: 50px; /* Réduit l'espace en haut */
+    padding-bottom: 0; /* Retire l'espacement inférieur */
+    text-align: center; /* Centre le texte */
+    background-color: #fff; /* Fond blanc */
+    color: #000; /* Texte noir */
+    background: linear-gradient(to bottom, #fff 60%, #333 100%); /* Dégradé du blanc vers le gris */
+    display: flex; /* Active Flexbox */
+    flex-direction: column; /* Organise verticalement */
+    justify-content: flex-start; /* Aligne le contenu en haut */
+    position: relative; /* Position relative */
+}
+
+/* titres h2 section HERO */
+.hero h2 {
+    font-family: 'Merriweather', serif; /* police */
+    font-size: 36px; /* Taille police  */
+    color: #003366; /* bleu marine */
+    text-align: center; /* Centre le texte */
+    margin-bottom: 20px; /* Ajoute un espace sous le titre */
+}
+
+/* Texte de la présentation */
+.presentation-text {
+    flex: 1; /* Prend tout l'espace disponible dans le conteneur Flex */
+    font-size: 24px; /* taille texte */
+    color: #000; /* noir */
+    padding: 0 20px; /* Espacement interne horizontal */
+    padding-left: 50px; /* Espacement interne à gauche plus large */
+    text-align: center; /* Centre le texte horizontalement */
+    max-width: 80%; /* Limite la largeur pour ne pas dépasser la section */
+    margin: 0 auto; /* Centre horizontalement l'élément */
+    line-height: 1.6; /* Hauteur de ligne pour espacer le texte */
+    margin-top: -50px; 
+}
+
+/* Image de présentation */
+.presentation-image {
+    width: 600px; /*largeur fixe */
+    height: auto; /* Conserve ratio d'aspect */
+}
+
+
+/* === BOUTON === */
+.btn {
+    display: inline-block; /* bouton bloc en ligne */
+    padding: 10px 20px; /* espacement interne horizontal et vertical */
+    background-color: #003366; /*fond bleu marine */
+    color: white; 
+    font-size: 1.2rem; 
+    text-decoration: none; /* Supprime le soulignement des liens */
+    border-radius: 5px; /* Arrondit légèrement les coins */
+    margin-top: 20px; /* Ajoute un espace au-dessus du bouton */
+    transition: background-color 0.3s ease; /* Animation lors du changement de couleur */
+}
+
+/* Effet au survol des boutons */
+.btn:hover {
+    background-color: #001f33; /* Change la couleur de fond en bleu plus foncé */
+}
+
+
+/* Section qui affiche les diplômes */
+.diplomas {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(40, 40, 40, 0.8)); /* Dégradé du noir au gris foncé légèrement transparent */
+    padding: 50px 20px; /* Espacement interne vertical et horizontal */
+    color: #fff; /* Texte blanc */
+    text-align: center; /* Centre tout le texte */
+    border-top: 2px solid rgba(0, 51, 102, 0.5); /* Bordure en haut */
+    backdrop-filter: blur(8px); /* Applique un effet de flou à l'arrière-plan */
+}
+
+/* Titre de la section des diplômes */
+.diplomas h2 {
+    font-size: 1.3rem; 
+    color: #fff; 
+    margin-bottom: 30px; /* Ajoute un espace en dessous du titre */
+    font-family: 'Georgia', serif; 
+}
+
+/* Conteneur des cartes de diplômes */
+.diplomas-container {
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Répartit les cartes avec un espacement égal */
+    gap: 20px; /* Ajoute un espace fixe entre les cartes */
+    flex-wrap: wrap; /* Permet le retour à la ligne sur petits écrans */
+    margin-top: 20px; /* Ajoute un espace au-dessus des cartes */
+}
+
+/* Styles des cartes individuelles de diplômes */
+.diploma-card {
+    background-color: rgba(255, 255, 255, 0.4); /* Fond blanc semi-transparent */
+    color: #003366; /* Texte en bleu marine */
+    padding: 12px; /* Espacement interne */
+    border-radius: 15px; /* Coins arrondis */
+    width: 180px; /* Taille fixe des cartes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre */
+    text-align: center; /* Centre le contenu de chaque carte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+    backdrop-filter: blur(5px); /* Effet de flou sur l'arrière-plan des cartes */
+}
+
+/* Effet au survol des cartes */
+.diploma-card:hover {
+    transform: scale(1.05); /* Agrandit légèrement la carte */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Accentue l'ombre */
+}
+
+/* Titre dans chaque carte */
+.diploma-card h3 {
+    font-size: 0.9rem; 
+    margin-bottom: 8px; /* Ajoute un espace sous le titre */
+    font-weight: bold; /* Met le texte en gras */
+    color: #003366; /* Couleur bleu marine */
+}
+
+/* Texte dans chaque carte */
+.diploma-card p {
+    font-size: 0.7rem; 
+    line-height: 1.4; /* Espacement vertical entre les lignes */
+    color: #333; /* Texte gris foncé */
+}
+
+/* pour les petits écrans */
+@media (max-width: 768px) {
+    /* Change l'alignement du conteneur des cartes */
+    .diplomas-container {
+        flex-direction: column; /* Les cartes s'affichent en colonne */
+        align-items: center; /* Centre les cartes horizontalement */
+    }
+
+    /* Styles adaptés pour les cartes */
+    .diploma-card {
+        width: 80%; /* La carte prend plus de place sur petits écrans */
+        margin-bottom: 20px; /* Ajoute un espace en dessous de chaque carte */
+    }
+}
+
+/* La section pour afficher les compétences */
+.skills {
+    background: url('img/code.mp4') no-repeat center center/cover; /* Fond de la section avec vidéo */
+    background-size: cover; /* fond couvre toute la section */
+    color: #fff; 
+    padding: 30px 20px; /* Ajoute un espace interne : 30px en haut/bas, 20px à gauche/droite */
+    text-align: left; /* Aligne le texte à gauche */
+    position: relative; 
+    z-index: 1; 
+    overflow: hidden; /* Empêche les débordements */
+}
+
+/* Style pour le titre de la section compétences */
+.skills h2 {
+    font-size: 2rem; 
+    color: #fff; 
+    margin-bottom: 20px; 
+}
+
+/* Conteneur principal des compétences */
+.skills-container {
+    display: flex; /* Flexbox pour organiser éléments horizontalement */
+    justify-content: space-between; /* Espace égal entre les colonnes */
+    gap: 20px; /* espacement de 20px entre les colonnes */
+}
+
+/* Colonne gauche : compétences*/
+.left-skills {
+    width: 48%; /* La colonne occupe 48% de la largeur totale */
+}
+
+/* Élément individuel d'une compétence */
+.skill-item {
+    margin-bottom: 20px; /* Espacement vertical entre les compétences */
+}
+
+.skill-item p {
+    font-size: 1.2rem; /* Taille du texte des compétences */
+    margin-bottom: 10px; /* Espacement entre le texte et la barre de progression */
+    color: #fff; 
+}
+
+/* Barre de progression */
+.progress-bar {
+    background-color: #003366; /* Fond bleu marine de la barre */
+    height: 12px; /* Hauteur de la barre */
+    border-radius: 5px; /* Coins arrondis */
+    width: 100%; /* barre occupe toute la largeur */
+    margin: 10px 0; /* Espacement vertical au-dessus et en dessous de la barre */
+    max-width: 500px; /* Largeur maximale pour éviter que la barre ne soit trop grande */
+}
+
+/* Progression dans la barre */
+.progress {
+    height: 100%; /* La progression remplit la hauteur de la barre */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #fff; /* Couleur blanche pour la progression */
+}
+
+/* === Colonne droite : compétences === */
+.right-skills {
+    width: 48%; /* Largeur similaire à la colonne gauche */
+}
+
+/* Animation pour la barre de progression */
+.progress-bar .progress {
+    transition: width 0.5s ease; /* Transition fluide sur 0,5 seconde lorsque la largeur change */
+}
+
+
+/* Section principale des œuvres créatives */
+.creative-works {
+    background-color: #111;
+    padding: 50px 20px; /* Ajoute de l'espace en haut/bas (50px) et gauche/droite (20px) */
+    text-align: center; /* Centrage horizontal du contenu */
+    color: #fff; 
+    border-top: 2px solid #333; 
+}
+
+.creative-works h2 {
+    font-size: 2.5rem; 
+    color: #fff; 
+    margin-bottom: 40px; /* Espace en dessous pour séparer du contenu */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+/* Conteneur de la galerie d'images */
+.image-gallery {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centre horizontalement images */
+    gap: 20px; /* Espace de 20px entre chaque image */
+    flex-wrap: wrap; 
+    margin-top: 40px; /* Espace au-dessus de la galerie */
+}
+
+/* Élément individuel de la galerie */
+.image-item {
+    width: 250px; /* Chaque image largeur fixe de 250px */
+    text-align: center; /* Texte centré sous chaque image */
+    color: #ccc; /* Texte gris clair */
+}
+
+
+.image-item img {
+    width: 100%; /* Image occupe toute la largeur disponible */
+    height: auto; /* Préserve les proportions de l'image */
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Effet au survol des images */
+.image-item:hover img {
+    transform: scale(1.05); /* Augmente la taille de l'image */
+}
+
+/* Description sous les images */
+.image-description {
+    margin-top: 10px; /* Espace au-dessus de la description */
+    font-size: 1rem; /* Taille standard pour le texte */
+    line-height: 1.5; /* espacement des lignes */
+}
+
+
+aside {
+    max-width: 900px;
+    margin: 40px auto 0; /* Centrer l'aside et ajouter de l'espace en haut */
+    font-size: 1.2rem;
+    color: #ccc; 
+    line-height: 1.6;
+    text-align: center; /* Centre le texte */
+}
+
+/*bouton en savoir plus*/
+.more-info-btn .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #fff; /* Fond blanc */
+    color: #003366; /* Texte bleu marine */
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    border: 2px solid #003366; /* Bordure bleu marine */
+}
+
+.more-info-btn .btn:hover {
+    background-color: #003366; /* bleu marine au survol */
+    color: #fff; 
+    transform: scale(1.05); /* augmentation au survol */
+}
+
+/*les liens*/
+.social-links {
+    display: flex; 
+    justify-content: center; /* Centre les liens au milieu horizontalement */
+    margin-top: 2rem;
+}
+
+.social-icon {
+    margin: 0 1rem; /* espace à gauche et à droite de chaque lien */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: #fff; 
+    font-size: 1.1rem; 
+}
+
+.social-icon:hover {
+    color: #f0f0f0; /* blanc survol */
+}
+
+/* === MAIN SECTIONS === */
+main {
+    padding: 2rem;
+    background-color: #111; 
+}
+
+h2 {
+    font-size: 2.5rem; /* taille titres principaux */
+    margin-bottom: 1.5rem; /* espacement sous les titres */
+}
+
+ul {
+    list-style-type: none; /* Supprime puces ou numéros par défaut listes */
+    margin-left: 0; /* Supprime décalage gauche des listes */
+}
+
+ul li {
+    margin-bottom: 1rem; 
+}
+
+/* === FOOTER === */
+footer {
+    background: #111; /*fond noir*/
+    color: #fff; 
+    text-align: center; /* Centre texte */
+    padding: 2rem; /* espacement sur tous les côtés */
+}
+
+footer p {
+    font-size: 1rem; 
+    color: #aaa; 
+}
+
+footer a {
+    color: #fff; /* couleur des liens */
+}
+
+footer a:hover {
+    color: #ccc; /* liens gris survol */
+}
+
+/* === STYLES POUR LA PAGE Projets === */
+
+/* corps de la page pour la page Projets */
+#Projets {
+    font-family: Arial, sans-serif; 
+    margin: 0; /* Retirer les marges par défaut */
+    padding: 0; /* Retirer les espacements par défaut */
+    background-color: #f9f9f9; /* Fond gris */
+}
+
+/* contenu principal de la page Projets */
+#Projets main {
+    padding: 20px; /* Ajouter un espacement intérieur de 20px */
+}
+
+/* titre principal de la page Projets */
+#Projets h1 {
+    font-size: 2.5rem; /* Taille du texte */
+    text-align: center; /* Centrer */
+    margin-bottom: 1rem; /* Marge inférieure */
+    color: #fff; /* Couleur titre */
+}
+
+/* paragraphes de la page Projets */
+#Projets p {
+    font-size: 1rem; /* Taille texte*/
+    text-align: center; /* Centrer */
+    margin-bottom: 2rem; /* Marge inférieure */
+    color: #fff; /* Couleur titre */
+}
+
+/* les blocs blancs qui contiennent les liens */
+#Projets .work-item {
+    background: #fff; /* Fond blanc */
+    margin: 20px auto; /* Marge de 20px au-dessus et en dessous, centré horizontalement */
+    padding: 20px; /* Espacement intérieur de 20px */
+    max-width: 800px; /* Largeur maximale de 800px */
+    border-radius: 10px; /* Bords arrondis de 10px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
+    text-align: center; /* Centrer le texte à l'intérieur */
+}
+
+/* titres des blocs blancs dans la page Projets */
+#Projets .work-item h2 {
+    font-size: 1.8rem; /* Taille du texte du titre */
+    color: #003366; /* Couleur bleu marine */
+    margin-bottom: 10px; /* Marge inférieure de 10px */
+}
+
+/* paragraphes dans les blocs blancs de la page Projets */
+#Projets .work-item p {
+    font-size: 1.2rem; /* Taille texte */
+    margin-bottom: 20px; /* Marge inférieure de 20px */
+    color: #333; /* Couleur du texte */
+}
+
+
+
+
+/* sécurité pour largeur écran de 768px ou moins */
+@media (max-width: 768px) { 
+    header nav ul {
+        flex-direction: column; /* Change la disposition des liens de navigation en une colonne verticale */
+        align-items: center; /* Centre les éléments de navigation horizontalement */
+    }
+
+    header nav li {
+        margin: 0.5rem 0; /* Ajoute un espacement vertical de 0.5rem entre les éléments de navigation */
+    }
+
+    .hero {
+        padding-top: 80px; /* Ajoute un espace supérieur pour ajuster la mise en page sur mobile */
+    }
+
+    .presentation-container {
+        flex-direction: column; /* Aligne les éléments (texte et image) verticalement */
+        align-items: center; /* Centre les éléments horizontalement */
+    }
+
+    .presentation-text {
+        text-align: center; /* Centre le texte de la présentation */
+    }
+
+    .presentation-image {
+        width: 150px; /* Réduit la largeur de l'image pour une meilleure adaptation aux petits écrans */
+    }
+}

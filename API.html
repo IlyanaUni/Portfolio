@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faits Aléatoires</title>
+    <link rel="stylesheet" href="Style.css">
+
+</head>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Projets.html">Projets</a></li>
+                <li><a href="API.html">API</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<body>
+
+       <aside> 
+        <h3 style="text-align: center;">Cette page API est en construction, j'étudie encore cette fonction et je suis à la recherche d'une idée qui serait interréssante et pertinente en vue d'une integration à un site internet sur la thématique du CV </h3>
+    </aside>
+    
+<div class="container">
+    <h1 style="text-align: center;">Apprenez des faits Aléatoires</h1>
+
+
+    <div id="fact" class="fact">
+        Chargement du fait...
+    </div>
+</div>
+
+<script>
+    // Cette fonction est appelée dès que la page est chargée
+    window.onload = function() {
+        fetch('https://uselessfacts.jsph.pl/random.json?language=fr')  // Demander un fait aléatoire
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Problème de connexion');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Afficher le fait aléatoire
+                document.getElementById('fact').textContent = data.text;
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                document.getElementById('fact').textContent = 'Une erreur est survenue. Essayez encore.';
+            });
+    };
+</script>
+
+</body>
+</html>
+
+
+
